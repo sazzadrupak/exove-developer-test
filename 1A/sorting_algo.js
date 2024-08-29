@@ -10,9 +10,10 @@ const words = [
 ];
 
 function sortBy(a, b, pos) {
-  if (a.charCodeAt(pos) - b.charCodeAt(pos) === 0) {
+  const diff = a.charCodeAt(pos) - b.charCodeAt(pos);
+  if (diff === 0) {
     return pos > 0 ? sortBy(a, b, pos - 1) : 0;
   }
-  return a.charCodeAt(pos) - b.charCodeAt(pos);
+  return diff;
 }
 console.log(words.sort((a, b) => sortBy(a, b, 2)));
