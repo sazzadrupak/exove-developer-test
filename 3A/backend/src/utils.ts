@@ -29,7 +29,6 @@ export const parseValidCurrencyCode = (curr: string): CurrencyCodeRecord => {
 
 export const getCurrencyName = (curr: string): string => {
   const currencyCode = number('978');
-  console.log('CODE ', curr, typeof curr, currencyCode);
   if (currencyCode) {
     return currencyCode.code;
   }
